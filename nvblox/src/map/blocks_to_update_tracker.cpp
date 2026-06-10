@@ -20,7 +20,7 @@ namespace nvblox {
 /// Safety vent if size is growing too much. This should not happen as long as
 /// the indices are consumed.
 void clearIfTooLarge(Index3DSet& set, const std::string& name) {
-  constexpr size_t kMaxSize = 100'000;
+  constexpr size_t kMaxSize = 200'000;
   if (set.size() > kMaxSize) {
     LOG(ERROR) << "BlocksToUpdateTracker: IndexSet " << name
                << " is too large: " << set.size() << " > " << kMaxSize
